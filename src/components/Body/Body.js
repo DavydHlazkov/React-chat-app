@@ -2,11 +2,12 @@ import React from "react";
 import Message from "../Message/Message";
 import Input from "../Input/Input";
 import User from "../User/User";
+import "./body.css"
 
 function Body(){
     return (
-        <div>
-            <div>
+        <div className="main-body">
+            <div className="user">
                 <User/>
                 <h1>Vasyl Kit</h1>
             </div>
@@ -15,7 +16,7 @@ function Body(){
                 <Message/>
                 <Message/>
             </div>
-            <div>
+            <div className="message-input">
                 <Input/>
             </div>
         </div>

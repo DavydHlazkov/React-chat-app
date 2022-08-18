@@ -1,9 +1,10 @@
 import React from "react";
+import "./chat.css"
 
 function Chat (){
 
     return (
-        <div>
+        <div className="main-chat">
             <div>
                 <img style={{width: "200px"}} src="https://i.ytimg.com/vi/oxxHL6r-PZA/sddefault.jpg" alt="petro" ></img>
                 <div>

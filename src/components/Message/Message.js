@@ -1,8 +1,9 @@
 import React from "react";
+import "./message.css"
 
 function Message(){
     return(
-        <div>
+        <div className="main-message">
             <div>
                 <img style={{width: "100px"}} src="https://i.ytimg.com/vi/pzEy8z_IxxY/hqdefault.jpg" alt="mamyna" ></img>
             </div>

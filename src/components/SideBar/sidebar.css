@@ -1,0 +1,13 @@
+.main-sidebar{
+    width: 40%;
+    height: auto;
+    background-color: aquamarine;
+    border: 1px solid red;
+}
+
+.user-search{
+    display: flex;
+    flex-direction: column;
+    background-color: burlywood;
+    border: 1px solid gold;
+}

@@ -7,8 +7,8 @@ import User from "../User/User";
 function SideBar(){
 
     return (
-        <aside>
-            <div>
+        <aside className="main-sidebar">
+            <div className="user-search">
                 <User/>
                 <Search/>
             </div>

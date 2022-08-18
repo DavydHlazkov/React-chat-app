@@ -1,0 +1,21 @@
+.main-body{
+    width: 100%;
+    background-color:beige;
+}
+
+.user{
+    display: flex;
+    background-color: lightgreen;
+
+}
+
+.message-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 90%;
+    background-color: lightpink;
+    height: 80px;
+    width: 100%;
+}
