@@ -1,0 +1,68 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "Vika",
+        "image": "https://images.pexels.com/photos/2625122/pexels-photo-2625122.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "read": true
+      },
+      {
+        "id": 2,
+        "name": "Alisa",
+        "image": "https://cdn-icons-png.flaticon.com/512/147/147140.png",
+        "read": true
+      },
+      {
+        "id": 3,
+        "name": "Anfisa",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4pdIo7YXfgxpV2K9GycC4yipsoz3qk6NsJw&usqp=CAU",
+        "read": true
+      },
+      {
+        "id": 4,
+        "name": "Margarita",
+        "image": "https://cdn131.picsart.com/341420861097201.jpg?type=webp&to=crop&r=256",
+        "read": false
+      }
+    ],
+    "messages" : [
+      {
+        "id": 1,
+        "chatId": 1,
+        "receiver": true,
+        "text": "Hello that a first commit",
+        "time": "2021-01-12T13:37:27+00:00"
+      },
+      {
+        "id": 2,
+        "chatId": 3,
+        "receiver": true,
+        "text": "That is a secont message",
+        "time": "2020-03-12T13:37:27+00:00"
+      },{
+        "id": 3,
+        "chatId": 2,
+        "receiver": true,
+        "text": "We are losing money! Quick!",
+        "time": "2019-03-12T12:37:27+00:00"
+      },{
+        "id": 4,
+        "chatId": 2,
+        "receiver": false,
+        "text": "Third message",
+        "time": "2019-03-12T13:37:27+00:00"
+      },{
+        "id": 5,
+        "chatId": 2,
+        "receiver": false,
+        "text": "Message number four",
+        "time": "2019-03-12T14:37:27+00:00"
+      },{
+        "id": 6,
+        "chatId": 2,
+        "receiver": true,
+        "text": "Five",
+        "time": "2019-03-12T16:37:27+00:00"
+      }
+    ]
+  }
