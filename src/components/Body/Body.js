@@ -19,7 +19,7 @@ function Body({user, messages}){
             .then(data => {
               setTimeout(() => {
                 setMs(oldMs => [...oldMs, {"text": data.value, "time": new Date(), "myMessage": false}])
-              }, 1000)
+              }, 10000)
             })
           setInputValue('')
         }
