@@ -1,4 +1,5 @@
 import React from 'react';
+import "./search.css"
 
 function Search ({value, setValue}) {
 
@@ -7,10 +8,10 @@ function Search ({value, setValue}) {
   }
 
   return (
-    <div>
+    <div className='search-main'>
       <input
         type="text"
-        placeholder="Search..."
+        placeholder=" Search..."
         className= 'seach-input'
         value={value}
         onChange={handleChange}

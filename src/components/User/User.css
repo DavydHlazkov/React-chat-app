@@ -1,9 +1,5 @@
-.main-user{
-    border: 1px solid black;
-    background-color: aqua;
-}
-
 .user-img{
-    width: 100px;
+    width: 50px;
+    margin: 10px 0px 10px 15px;
 }
 

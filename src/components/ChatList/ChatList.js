@@ -1,16 +1,16 @@
 import React from "react";
 import Chat from "../Chat/Chat";
+import "./chatList.css"
 
-function ChatList (){
+function ChatList ({users, messages}){
 
     return (
-        <div>
+        <div className="chatList-main">
             <h1>Chats</h1>
-            <Chat/>
-            <Chat/>
-            <Chat/>
-            <Chat/>
-            <Chat/>
+            {users.map((user, id) =>{
+                const userMessages = messages.filter (mes => mes.chatId === user.id)
+                return <Chat key={id} user = {user} messages = {userMessages} />
+            })}
         </div>
     )
 }

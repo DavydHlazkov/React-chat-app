@@ -1,12 +1,11 @@
 import React from "react";
 import "./User.css"
 
-function User (){
+function User ({imgUrl}){
     return(
         <div className="main-user">
-            <img className="user-img" src="https://i.ytimg.com/vi/7Bo4CTIXx-A/mqdefault.jpg" alt="user"></img>
+            <img className="user-img" src={imgUrl} alt="user"></img>
         </div>
-
     )
 }
 export default User

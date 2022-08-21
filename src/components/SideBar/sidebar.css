@@ -1,13 +1,15 @@
 .main-sidebar{
-    width: 40%;
+    width: 50%;
+    min-height: 100vh;
     height: auto;
-    background-color: aquamarine;
-    border: 1px solid red;
+    background-color: #fff;
+    border-right: 1px solid rgb(200, 200, 200);
 }
 
 .user-search{
     display: flex;
     flex-direction: column;
-    background-color: burlywood;
-    border: 1px solid gold;
+    background-color: rgb(240, 240, 240);
+    border-bottom: 1px solid rgb(200, 200, 200);
 }
+

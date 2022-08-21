@@ -1,11 +1,14 @@
 .main-body{
     width: 100%;
-    background-color:beige;
+    height: auto;
+    background-color: rgb(240, 240, 240);
 }
 
 .user{
     display: flex;
-    background-color: lightgreen;
+    color: rgb(97, 97, 97);;
+    background-color: rgb(240, 240, 240);
+    border-bottom: 1px solid rgb(200, 200, 200);
 
 }
 
@@ -13,9 +16,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position:sticky;
     top: 90%;
-    background-color: lightpink;
+    border-top: 1px solid rgb(200, 200, 200); ;
+    background-color: rgb(240, 240, 240);
     height: 80px;
     width: 100%;
+}
+
+.message-input input {
+    width: 90%;
+    height: 30px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 1px solid rgb(200, 200, 200);;
 }

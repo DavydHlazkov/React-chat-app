@@ -1,20 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./chat.css"
+import User from "../User/User";
+import {Link} from "react-router-dom"
 
-function Chat (){
+function Chat ({user, messages}){
+
+    const timeOptions = {
+        month: "short",
+        day : "numeric",
+        year: "numeric"
+    }
+
+    const [lastMessage, setLastMessage] = useState('no messages yet...')
+    const [lastMessageTime, setLastMessageTime] = useState('')
+
+    useEffect(()=>{
+        const sortMessages = [...messages]
+        sortMessages.sort((a,b)=> new Date(b.time) - new Date(a.time))
+
+        if(sortMessages.length){
+            setLastMessage(sortMessages[0].text)
+            const date = new Date(sortMessages[0].time)
+            setLastMessageTime(date.toLocaleString("en-US", timeOptions))
+        }
+        
+    }, [messages])
+
 
     return (
+        <Link to={'/' + user.id} style = {{textDecoration:'none', color:'inherit'}}>
         <div className="main-chat">
-            <div>
-                <img style={{width: "200px"}} src="https://i.ytimg.com/vi/oxxHL6r-PZA/sddefault.jpg" alt="petro" ></img>
-                <div>
-                    <p>Petro schur</p>
-                    <p>skilky sebe pamiatay zavzdy svitylys meni</p>
+                <User imgUrl={user.image}/>
+                <div className="name-last-mes">
+                    <h4>{user.name}</h4>
+                    <p>{lastMessage}</p>
                 </div>
-                <p>Aug 18,2022</p>
-            </div>
-
+                <p id="last-mes-date">{lastMessageTime}</p>
         </div>
+        </Link>
     )
 }
 

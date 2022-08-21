@@ -1,4 +1,30 @@
 .main-chat{
-    background-color: cadetblue;
-    border: 1px solid firebrick;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.name-last-mes{
+    margin-left: 10px;
+    
+}
+
+#last-mes-date{
+    margin-left: auto;
+    margin-right: 15px;
+    color: rgb(126, 126, 126);
+}
+
+.main-chat h4{
+    font-size: 20px;
+    color: rgb(97, 97, 97);
+    margin-bottom: -10px;
+}
+
+.main-chat p{
+    font-size: 15px;
+    color: rgb(150, 150, 150);
+    
 }
