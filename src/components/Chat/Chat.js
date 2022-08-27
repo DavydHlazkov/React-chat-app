@@ -4,7 +4,7 @@ import User from "../User/User";
 import {Link} from "react-router-dom"
 
 function Chat ({user, messages}){
-
+    
     const timeOptions = {
         month: "short",
         day : "numeric",
@@ -33,12 +33,12 @@ function Chat ({user, messages}){
                 <User imgUrl={user.image}/>
                 <div className="name-last-mes">
                     <h4>{user.name}</h4>
-                    <p>{lastMessage}</p>
+                    <p id="last-mes">{lastMessage}</p>
                 </div>
                 <p id="last-mes-date">{lastMessageTime}</p>
         </div>
         </Link>
     )
-}
+} 
 
 export default Chat

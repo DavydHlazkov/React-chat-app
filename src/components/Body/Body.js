@@ -1,27 +1,21 @@
-import React, { useState} from "react";
+import React, {useState} from "react";
 import Message from "../Message/Message";
 import User from "../User/User";
 import "./body.css"
-import axios from "axios";
+import {useDispatch, useSelector} from "react-redux"
+import { addMessage } from "../../redux/messagesReducer";
+import { axiosMessage } from "../../redux/getFromApi";
 
-function Body({user, messages}){
-
-    const [ms, setMs] = useState(messages)
-    const [inputValue, setInputValue] = useState('')
+function Body({user}){
+  const messages = useSelector(state => state.messages.messages.filter(mes => mes.chatId ===user.id))
+  const dispatch = useDispatch()
+  const [inputValue, setInputValue] = useState('')
 
     function handleKeypress(e) {
-        
-        if (e.keyCode === 13) {
-          setMs(oldMs => [...oldMs, {"text": inputValue, "time": new Date(), "myMessage": true }])
-          
-          axios.get('https://api.chucknorris.io/jokes/random')
-            .then(res => res.data)
-            .then(data => {
-              setTimeout(() => {
-                setMs(oldMs => [...oldMs, {"text": data.value, "time": new Date(), "myMessage": false}])
-              }, 10000)
-            })
-          setInputValue('')
+      if (e.keyCode === 13) {
+        dispatch(addMessage({"text": inputValue, "time": new Date(), "myMessage": true, "chatId": user.id }))
+        dispatch(axiosMessage(user.id))
+        setInputValue('')
         }
       }
 
@@ -33,7 +27,7 @@ function Body({user, messages}){
                 <h1>{user.name}</h1>
             </div>
             <div>
-                {ms.map((e, i) => <Message message = {e} userImage={user.image} key={i} />)}
+                {messages.map((e, i) => <Message message = {e} userImage={user.image} key={i} />)}
                 
             </div>
             <div className="message-input">
@@ -44,7 +38,6 @@ function Body({user, messages}){
                      onChange={(e) => setInputValue(e.target.value)}
                     onKeyUp={handleKeypress}
                     />
-            
             </div>
         </div>
     )

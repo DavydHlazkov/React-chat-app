@@ -2,18 +2,16 @@ import React from "react";
 import SideBar from "../SideBar/SideBar";
 import Body from "../Body/Body";
 import "./chat3.css"
+import { useSelector } from "react-redux";
 
-function Chat3 ({messages}) {
+function Chat3 () {
 
-    const user = {
-              "id": 3,
-              "name": "Velazquez",
-              "image": "https://www.retalkasia.com/sites/default/files/styles/large/public/contributors/photo_trent.png"
-            }
+    const user = useSelector(state => state.users[2])
+    const messages = useSelector(state => state.messages[2])
     
     return(
         <div className="chat1-main">
-            <SideBar/>
+            <SideBar messages={messages}/>
             <Body user={user} messages={messages}/>
         </div>
     )

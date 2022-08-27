@@ -4,11 +4,16 @@
     align-items: center;
     background-color: #fff;
     border-bottom: 1px solid rgb(200, 200, 200);
+    overflow-y:hidden;
 }
 
 .name-last-mes{
     margin-left: 10px;
-    
+    width: 60%;
+}
+
+#last-mes{
+    word-break: break-word;
 }
 
 #last-mes-date{

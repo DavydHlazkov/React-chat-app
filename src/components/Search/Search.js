@@ -1,10 +1,16 @@
 import React from 'react';
 import "./search.css"
+import {useSelector, useDispatch} from "react-redux"
+import { addSearch } from '../../redux/searchReducer';
 
-function Search ({value, setValue}) {
+
+function Search () {
+
+  const search = useSelector(state => state.search.search)
+  const dispatch = useDispatch()
 
   const handleChange = (event) => {
-    setValue(event.target.value);
+    dispatch(addSearch(event.target.value))
   }
 
   return (
@@ -13,11 +19,11 @@ function Search ({value, setValue}) {
         type="text"
         placeholder=" Search..."
         className= 'seach-input'
-        value={value}
+        value={search}
         onChange={handleChange}
       />
     </div>
   );
-};
+}; 
 
 export default Search;
